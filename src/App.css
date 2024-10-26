@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Editor specific styles */
+.ql-container {
+  font-size: 16px !important;
+  border: none !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.ql-toolbar {
+  border: none !important;
+  border-bottom: 1px solid #e8e8e8 !important;
+  background-color: #fff;
+  padding: 8px 12px !important;
+}
+
+.ql-editor {
+  padding: 24px !important;
+  min-height: calc(100vh - 180px);
+}
+
+.ql-editor p {
+  line-height: 1.6;
+}
+
+/* Ant Design overrides */
+.ant-alert-banner {
+  border: none;
+  border-radius: 0;
+}
+
+.ant-input {
+  font-size: 16px;
+}
+
+.ant-input:focus {
+  box-shadow: none;
+}
+
+.ant-btn {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+.ant-modal-content {
+  padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ant-modal-header {
+  margin: 0;
+  padding: 16px 24px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ant-modal-body {
+  padding: 24px;
+}
+
+.ant-list-item {
+  padding: 12px !important;
+  margin: 4px 0;
+  border-radius: 6px !important;
+  border: none !important;
+}
+
+.ant-list-item:hover {
+  background-color: #f5f5f5;
+}
+
+.ant-list-item-meta {
+  align-items: center;
+}
+
+.ant-list-item-meta-title {
+  margin: 0 !important;
+}
+
+.ant-list-item-meta-title button {
+  padding: 0;
+  height: auto;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.ant-list-item-meta-title button:hover {
+  color: #1677ff;
+}
+
+/* Custom utility classes */
+.shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+/* Document title input specific styles */
+.document-title-input.ant-input {
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.document-title-input.ant-input:hover,
+.document-title-input.ant-input:focus {
+  background-color: #f5f5f5;
 }

@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
+import DocumentEditor from "./DocumentEditor";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {/* Redirect root to a new document */}
+        <Route
+          path="/"
+          element={<Navigate to={`/doc/${uuidv4()}`} replace />}
+        />
+
+        {/* Handle document routes */}
+        <Route path="/doc/:docId" element={<DocumentEditor />} />
+
+        {/* Catch all other routes and redirect to new document */}
+        <Route
+          path="*"
+          element={<Navigate to={`/doc/${uuidv4()}`} replace />}
+        />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
