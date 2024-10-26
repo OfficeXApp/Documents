@@ -2,8 +2,7 @@
 
 Anonymous documents. Write private notes, publish anon.
 https://docs.officex.app
-
-OfficeX where freedom works.
+#OfficeX where freedom works.
 
 ![image](https://github.com/user-attachments/assets/26ba6061-5d38-446f-96f1-d39b7fc94d93)
 
